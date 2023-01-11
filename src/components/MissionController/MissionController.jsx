@@ -7,20 +7,44 @@ import { StyledShowCounter } from "../styles/ShowCounter.styled"
 import { useState } from "react"
 
 
-
-export const MissionController = ({ className }) => {
+export const MissionController = ({
+   className,
+   secondaryMissions,
+   setTotalPoints,
+   mainMissions,
+   faction,
+   index,
+   playerInfo
+}) => {
 
    const [missionPoints, setMissionPoints] = useState(0)
 
+   if (!secondaryMissions && !mainMissions) return ""
+
    return (
       <div className={className}>
-         <StyledSubstractCounter substractPoints={setMissionPoints} />
+         <StyledSubstractCounter
+            substractPoints={setMissionPoints}
+            missionPoints={missionPoints}
+            setTotalPoints={setTotalPoints}
+         />
 
-         <StyledMissionSelector />
+         <StyledMissionSelector
+            secondaryMissions={secondaryMissions ? JSON.parse(JSON.stringify(secondaryMissions)) : null}
+            mainMissions={mainMissions ? JSON.parse(JSON.stringify(mainMissions)) : null}
+            faction={faction}
+            index={index}
+            playerInfo={playerInfo}
+         />
 
          <StyledShowCounter actualCount={missionPoints} />
 
-         <StyledAddCounter addPoints={setMissionPoints} />
+         <StyledAddCounter
+            addPoints={setMissionPoints}
+            missionPoints={missionPoints}
+            setTotalPoints={setTotalPoints}
+            max={15}
+         />
       </div>
    )
 }

@@ -34,6 +34,9 @@ module.exports = {
          "error",
          "never"
       ],
+      "noUnusedLocals": [
+         "warn"
+      ]
       // "react/react-in-jsx-scope": "off"
    }
 }

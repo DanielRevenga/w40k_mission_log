@@ -13,7 +13,7 @@ export const CommandPointsController = ({ className }) => {
 
          <StyledShowCounter actualCount={commandPoints} rounded />
 
-         <StyledAddCounter addPoints={setCommandPoints} />
+         <StyledAddCounter addPoints={setCommandPoints} max={20} />
       </div>
    )
 }

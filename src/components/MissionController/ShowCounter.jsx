@@ -1,7 +1,6 @@
 
 
-export const ShowCounter = ({ actualCount = 0, className }) => {
-
+export const ShowCounter = ({ className, actualCount = 0 }) => {
 
 
    return (

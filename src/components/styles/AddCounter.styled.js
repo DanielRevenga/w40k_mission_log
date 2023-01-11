@@ -5,10 +5,11 @@ export const StyledAddCounter = styled(AddCounter)`
 
    color: #fff;
    border: 1px solid white;
-   padding: 10px 15px;
+   padding: 15px 20px;
+   min-width: 60px;
+   min-height: 60px;
    border-radius: 8px;
    background-color: #515459;
-   width: 20px;
    display: flex;
    justify-content: center;
    align-items: center;

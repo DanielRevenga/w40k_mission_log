@@ -5,11 +5,11 @@ export const StyledCommandPointsController = styled(CommandPointsController)`
 
    display: flex;
    justify-content: space-between;
-   width: 20vh;
-   margin: auto;
    padding: 10px;
+   min-height: 60px;
+   min-width: 40%;
    border-radius: 8px;
-   border: 1px solid #acaeb0;
+   border: 3px solid #acaeb0;
    margin-bottom: 50px;
 
 `
